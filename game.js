@@ -118,10 +118,15 @@ function draw() {
 ctx.fillStyle = p.color || "blue";
 ctx.fillRect(p.x, p.y + 20, 30, 30);
 
+//outline 
+ctx.strokeStyle = "black";
+ctx.strokeRect(p.x, p.y + 20, 30, 30);
+
 // head
 ctx.beginPath();
 ctx.arc(p.x + 15, p.y + 10, 10, 0, Math.PI * 2);
 ctx.fill();
+
 
 // eyes
 ctx.fillStyle = "white";
