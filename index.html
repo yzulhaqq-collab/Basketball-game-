@@ -2,11 +2,53 @@
 <html>
 <head>
   <title>Basketball PvP</title>
+  <style>
+    body { margin: 0; text-align: center; background: #eee; }
+    canvas { background: #fff; display: block; margin: auto; }
+
+    .controls {
+      position: fixed;
+      bottom: 20px;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    button {
+      font-size: 20px;
+      padding: 15px 20px;
+      border: none;
+      border-radius: 10px;
+      background: #333;
+      color: white;
+    }
+
+    #startBtn {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 10px 20px;
+      font-size: 18px;
+      background: green;
+    }
+  </style>
 </head>
 <body>
+
+<button id="startBtn">▶ Start</button>
+
 <canvas id="game" width="800" height="400"></canvas>
+
+<div class="controls">
+  <button id="left">⬅️</button>
+  <button id="right">➡️</button>
+  <button id="jump">⬆️</button>
+  <button id="shoot">🏀</button>
+</div>
 
 <script src="/socket.io/socket.io.js"></script>
 <script src="game.js"></script>
+
 </body>
 </html>
