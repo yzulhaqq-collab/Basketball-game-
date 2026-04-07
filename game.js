@@ -15,7 +15,8 @@ let player = {
   x: 100,
   y: 300,
   dy: 0,
-  onGround: true
+  onGround: true,
+  color: Math.random() > 0.5 ? "blue" : "red"
 };
 
 let keys = {};
