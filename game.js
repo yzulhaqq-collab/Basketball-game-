@@ -19,6 +19,22 @@ let player = {
 };
 
 let keys = {};
+// MOBILE CONTROLS
+document.getElementById("left").ontouchstart = () => keys["a"] = true;
+document.getElementById("left").ontouchend = () => keys["a"] = false;
+
+document.getElementById("right").ontouchstart = () => keys["d"] = true;
+document.getElementById("right").ontouchend = () => keys["d"] = false;
+
+document.getElementById("jump").ontouchstart = () => keys["w"] = true;
+document.getElementById("jump").ontouchend = () => keys["w"] = false;
+
+document.getElementById("shoot").ontouchstart = () => socket.emit("shoot");
+
+// START BUTTON
+document.getElementById("startBtn").onclick = () => {
+  gameState = "playing";
+};
 let gameState = "menu";
 
 // SOCKET EVENTS
