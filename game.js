@@ -112,8 +112,20 @@ function draw() {
   // DRAW PLAYERS
   for (let id in players) {
     let p = players[id];
-    ctx.fillStyle = "black";
-    ctx.fillRect(p.x, p.y, 30, 50);
+    // DOODLE PLAYER
+// body
+ctx.fillStyle = p.color || "blue";
+ctx.fillRect(p.x, p.y + 20, 30, 30);
+
+// head
+ctx.beginPath();
+ctx.arc(p.x + 15, p.y + 10, 10, 0, Math.PI * 2);
+ctx.fill();
+
+// eyes
+ctx.fillStyle = "white";
+ctx.fillRect(p.x + 8, p.y + 5, 5, 5);
+ctx.fillRect(p.x + 17, p.y + 5, 5, 5);
   }
 
   // DRAW BALL
